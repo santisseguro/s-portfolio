@@ -33,3 +33,12 @@ module.exports = {
   },
   plugins: []
 };
+
+safelist: [
+  'max-w-[180px]',
+  'max-w-[480px]',
+  'w-full',
+  'w-auto',
+  'object-contain',
+  'object-cover',
+]

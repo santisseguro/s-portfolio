@@ -35,3 +35,109 @@ video:hover {
   transform: scale(1.02);
   transition: transform 0.3s ease;
 }
+
+.filter-btn {
+  padding: 0.5rem 1.25rem;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.8);
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.05), transparent);
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  box-shadow: 0 0 8px rgba(255,255,255,0.1);
+}
+
+.filter-btn.active {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px rgba(255,255,255,0.2);
+}
+
+.filter-btn-primary {
+  background: linear-gradient(to bottom right, rgba(14, 165, 233, 0.15), rgba(255, 255, 255, 0.05));
+  border: 1px solid rgba(14, 165, 233, 0.3);
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 600;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px rgba(14, 165, 233, 0.15);
+  transition: all 0.3s ease;
+}
+
+.filter-btn-primary:hover {
+  background: rgba(14, 165, 233, 0.25);
+  box-shadow: 0 0 15px rgba(14, 165, 233, 0.3);
+  color: white;
+}
+
+.plyr--video.plyr--full-ui .plyr__video-wrapper {
+  border-radius: 1rem !important; /* Tailwind's rounded-2xl ≈ 1rem */
+  overflow: hidden;
+}
+
+.plyr__video-wrapper {
+  border-radius: 1rem !important;
+  overflow: hidden;
+}
+
+.plyr--video .plyr__video-wrapper video {
+  object-fit: contain;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 12px rgba(255,255,255,0.4), 0 0 24px rgba(255,255,255,0.2);
+  }
+  50% {
+    box-shadow: 0 0 18px rgba(255,255,255,0.6), 0 0 36px rgba(255,255,255,0.3);
+  }
+}
+.hover-pulse-glow:hover {
+  animation: pulse-glow 1.5s infinite;
+}
+
+@keyframes gradient-move {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+.bg-animated {
+  background-size: 400% 400%;
+  animation: gradient-move 15s ease infinite;
+}
+
+@keyframes neon-border-move {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.neon-border {
+  background: linear-gradient(135deg, #00ffe0, #8b5cf6, #00ffe0);
+  background-size: 300% 300%;
+  animation: neon-border-move 6s linear infinite;
+  border-radius: 2rem;
+  filter: drop-shadow(0 0 12px rgba(0, 255, 224, 0.3))
+          drop-shadow(0 0 24px rgba(139, 92, 246, 0.3));
+  opacity: 0.9;
+}
