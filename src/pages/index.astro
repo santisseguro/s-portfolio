@@ -175,7 +175,7 @@ import '../styles/global.css';
 
 <!-- VIDEO SHOWCASE -->
 <section class="w-full px-4 mt-10 mb-10" id="video-showcase">
-  <div class="sticky top-[6rem] z-40 w-full flex justify-center mb-4 backdrop-blur-md px-4 py-3 text-sm text-white/70">
+<div class="sticky top-[4.5rem] z-50 w-full flex justify-center mb-4 backdrop-blur-md px-4 py-3 text-sm text-white/70 shadow-md shadow-black/30">
     <div class="flex gap-3 flex-wrap items-center">
       <!-- Formato -->
       <div class="flex gap-3">
@@ -467,7 +467,6 @@ import '../styles/global.css';
       const player = new Plyr(p, {
         controls: ['mute']
       });
-      player.muted = true;
     });
   });
 </script>
@@ -483,6 +482,7 @@ import '../styles/global.css';
       speed: 500,
       useTransforms: true,
     });
+    shuffleInstance.layout();
 
     let activeFormat = 'all';
     let activeCategory = null;
